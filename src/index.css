@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@import "@fontsource/montserrat";
+@import "@fontsource/inter";
+@import '@fontsource/montserrat';
+@import '@fontsource/inter';
+@import '@fontsource/lora';
+@import '@fontsource/playfair-display';
+@import '@fontsource/dm-serif-display';
+
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white;
+}
+
+html.has-scroll-smooth {
+  scroll-behavior: auto !important;
+}
+
+[data-scroll-container] {
+  will-change: transform;
+  transition: transform 0.1s ease-out; /* Smooth scrolling feel */
+}
+
+
+
+/* :root { */
+  /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  /* line-height: 1.5;
+  font-weight: 400; */
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
+  /* background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+/* } */
+
+
+/* @layer base{
+  li{
+    @apply text-[16px] leading-[24px] text-opacity-70 text-[#404145] hover:text-[#1dbf73] transition-all duration-300;
+  }
+} */
+
+/* @layer utilities{
+  .navbars{
+    @apply text-[16px] leading-[24px] text-opacity-70 text-[#404145] hover:text-[#1dbf73] transition-all duration-300;
+  }
+} */
+
+/* @layer base{
+  h4{
+    @apply text-lg md:text-xl font-medium tracking-wide text-white/80 uppercase
+  }
+  h1{
+    @apply text-4xl md:text-6xl font-bold leading-tight md:leading-16 text-white drop-shadow-lg;
+  }
+  p{
+    @apply text-base md:text-lg text-white/90 leading-normal md:leading-relaxed;
+  }
+} */
+
+
+@layer utilities{
+  .text-glow {
+    text-shadow: 0 0 10px #00FF66, 0 0 20px #00FF66, 0 0 30px #00FF66;
+  }
+}
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.font-lora{
+  font-family: "Lora", serif;
+}
+
+.font-playfair{
+  font-family: "Playfair Display", serif;
+}
+
+.font-serif-display{
+  font-family: "DM Serif Display", serif;
+  /* font-weight: 400; */
+  font-style: normal;
+}
