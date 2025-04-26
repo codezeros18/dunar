@@ -6,7 +6,7 @@ import { RiLineFill } from "react-icons/ri";
 
 const Footer: React.FC = () => {
   return (
-    <div className="bg-white py-16 min-h-[300px] flex flex-col items-center text-center space-y-8 h-auto">
+    <div className="bg-white py-16 min-h-[300px] flex flex-col items-center text-center space-y-8 h-auto font-poppins">
       {/* Mobile: Logos side by side */}
       <div className="flex items-center justify-center space-x-4 md:hidden">
         <img src={logo} alt="Logo 1" className="h-24 w-auto" />
@@ -22,19 +22,13 @@ const Footer: React.FC = () => {
         </p>
         {/* Social Icons */}
         <div className="flex space-x-6 text-xl text-gray-700">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/dutaantinarkoba.umn/" target="_blank" rel="noopener noreferrer">
             <FaInstagram className="hover:text-pink-500 transition-all duration-300" />
           </a>
-          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
-            <FaTiktok className="hover:text-black transition-all duration-300" />
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <FaTwitter className="hover:text-blue-400 transition-all duration-300" />
-          </a>
-          <a href="mailto:your-email@example.com">
+          <a href="mailto:dutaantinarkoba@umn.ac.id">
             <FaEnvelope className="hover:text-red-500 transition-all duration-300" />
           </a>
-          <a href="https://line.me" target="_blank" rel="noopener noreferrer">
+          <a href="https://line.me/R/ti/p/@libaaa" target="_blank" rel="noopener noreferrer">
             <RiLineFill className="hover:text-green-500 transition-all duration-300" />
           </a>
         </div>
@@ -56,16 +50,10 @@ const Footer: React.FC = () => {
           </p>
           {/* Social Icons */}
           <div className="flex space-x-6 text-xl text-gray-700">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/dutaantinarkoba.umn/" target="_blank" rel="noopener noreferrer">
               <FaInstagram className="hover:text-pink-500 transition-all duration-300" />
             </a>
-            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
-              <FaTiktok className="hover:text-black transition-all duration-300" />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <FaTwitter className="hover:text-blue-400 transition-all duration-300" />
-            </a>
-            <a href="mailto:your-email@example.com">
+            <a href="mailto:dutaantinarkoba@umn.ac.id">
               <FaEnvelope className="hover:text-red-500 transition-all duration-300" />
             </a>
             <a href="https://line.me" target="_blank" rel="noopener noreferrer">

@@ -1,21 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from '../Layouts/Navbar'
 import Header from '../Components/Header'
-// import SmoothScroll from '../Components/SmoothScroll'
 import Events from '../Components/Events'
 import Footer from '../Layouts/Footer'
-import VisiMisi from '../Components/VisiMisi'
-import "@fontsource/montserrat/300.css"; // Light
-import "@fontsource/montserrat/600.css"; // Semi-bold
-import "@fontsource/montserrat/900.css"; // Extra-bold
-import DivisionSlider from '../Components/DivisionSlider'
-import DivisionSlider2 from '../Components/DivisionSlider2'
-
-
-// import CustomCalendar from '../Components/CustomCalendar'
-
-// import Bg1 from '../assets/background8.jpg'
-// import Bg2 from '../assets/background9.jpeg'
+import Dunar from '../Components/Dunar'
 import Bg3 from '../assets/back1.jpg'
 
 const images = [Bg3, Bg3, Bg3]
@@ -34,7 +22,7 @@ const Home: React.FC = () => {
   return (
     // <SmoothScroll>
       <div className="font-montserrat relative min-h-screen overflow-hidden">
-        <div className="relative h-screen w-full">
+        <div className="relative h-[250vh] w-full">
           {images.map((image, index) => (
             <div
               key={index}
@@ -44,15 +32,28 @@ const Home: React.FC = () => {
               style={{ backgroundImage: `url(${image})` }}
             />
           ))}
-          <div className="absolute inset-0 bg-black opacity-30" />
+          <div className="absolute inset-0 bg-black opacity-50" />
           <div className="relative z-10">
             <Navbar />
             <Header />
+            <Dunar />
           </div>
         </div>
-        <VisiMisi />
-        {/* <DivisionSlider /> */}
-        <DivisionSlider2 />
+        {/* <div className="relative h-auto py-20 w-full">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 bg-cover bg-right bg-no-repeat transition-opacity duration-1000 ease-in-out ${
+                index === currentIndex ? "opacity-100" : "opacity-0"
+              }`}
+              style={{ backgroundImage: `url(${image})` }}
+            />
+          ))}
+          <div className="absolute inset-0 bg-black opacity-70" />
+          <div className="relative z-10">
+            <DivisionSlider />
+          </div>
+        </div> */}
         <Events />
         <Footer />
       </div>

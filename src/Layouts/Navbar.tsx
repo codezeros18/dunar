@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <div className='py-2'>
+        <div className='py-2 font-poppins'>
             <div className="bg-white mx-4 md:mx-12 py-0 my-4 rounded-[50px] shadow-md z-50 relative">
                 <div className='mx-8 md:mx-auto md:max-w-7xl'>
                     <div className='flex justify-between items-center'>
