@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
                         <div className='hidden md:flex'>
                             <ul className='flex space-x-8'>
                                 {Navbar.map((item, index) => (
-                                    <li key={index} className='text-[16px] font-[500] text-black transition-all duration-300'>
+                                    <li key={index} className='text-[16px] font-[500] text-black transition-all duration-300 hover:text-indigo-300'>
                                         <Link to={item.link}>{item.nav}</Link>
                                     </li>
                                 ))}

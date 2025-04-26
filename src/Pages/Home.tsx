@@ -22,7 +22,7 @@ const Home: React.FC = () => {
   return (
     // <SmoothScroll>
       <div className="font-montserrat relative min-h-screen overflow-hidden">
-        <div className="relative h-[250vh] w-full">
+        <div className="relative h-[250vh] md:h-[220vh] w-full">
           {images.map((image, index) => (
             <div
               key={index}
@@ -39,21 +39,6 @@ const Home: React.FC = () => {
             <Dunar />
           </div>
         </div>
-        {/* <div className="relative h-auto py-20 w-full">
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 bg-cover bg-right bg-no-repeat transition-opacity duration-1000 ease-in-out ${
-                index === currentIndex ? "opacity-100" : "opacity-0"
-              }`}
-              style={{ backgroundImage: `url(${image})` }}
-            />
-          ))}
-          <div className="absolute inset-0 bg-black opacity-70" />
-          <div className="relative z-10">
-            <DivisionSlider />
-          </div>
-        </div> */}
         <Events />
         <Footer />
       </div>

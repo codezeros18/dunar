@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../assets/logo.png';
 import logo1 from '../assets/logo3.png';
-import { FaInstagram, FaTiktok, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FaInstagram,FaEnvelope } from "react-icons/fa";
 import { RiLineFill } from "react-icons/ri";
 
 const Footer: React.FC = () => {
