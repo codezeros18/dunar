@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
       {/* Mobile: Address & Social Icons */}
       <div className="md:hidden flex flex-col items-center space-y-6">
         <p className="text-gray-600 text-sm text-center">
-          Universitas Multimedia Nusantara <br />
+          Universitas Multimedia NPusantara <br />
           Jl. Scientia Boulevard, Gading Serpong <br />
           Tangerang, Banten 15811, Indonesia
         </p>
@@ -27,9 +27,6 @@ const Footer: React.FC = () => {
           </a>
           <a href="mailto:dutaantinarkoba@umn.ac.id">
             <FaEnvelope className="hover:text-red-500 transition-all duration-300" />
-          </a>
-          <a href="https://line.me/R/ti/p/@libaaa" target="_blank" rel="noopener noreferrer">
-            <RiLineFill className="hover:text-green-500 transition-all duration-300" />
           </a>
         </div>
       </div>
@@ -55,9 +52,6 @@ const Footer: React.FC = () => {
             </a>
             <a href="mailto:dutaantinarkoba@umn.ac.id">
               <FaEnvelope className="hover:text-red-500 transition-all duration-300" />
-            </a>
-            <a href="https://line.me" target="_blank" rel="noopener noreferrer">
-              <RiLineFill className="hover:text-green-500 transition-all duration-300" />
             </a>
           </div>
         </div>
