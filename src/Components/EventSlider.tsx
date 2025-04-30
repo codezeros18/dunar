@@ -48,6 +48,7 @@ const EventSlider: React.FC = () => {
 
         {/* ANW Section */}
         <motion.div
+          id="anw"
           ref={anwRef}
           initial={{ opacity: 0, y: 40 }}
           animate={inViewAnw ? { opacity: 1, y: 0 } : {}}
@@ -82,6 +83,7 @@ const EventSlider: React.FC = () => {
 
         {/* DGTS Section */}
         <motion.div
+          id="dgts"
           ref={dgtsRef}
           initial={{ opacity: 0, y: 40 }}
           animate={inViewDgts ? { opacity: 1, y: 0 } : {}}
@@ -116,6 +118,7 @@ const EventSlider: React.FC = () => {
 
         {/* Awarding Night Section */}
         <motion.div
+          id="award"
           ref={awardRef}
           initial={{ opacity: 0, y: 40 }}
           animate={inViewAward ? { opacity: 1, y: 0 } : {}}

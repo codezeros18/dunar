@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import dgts1 from '../assets/dgts1.jpg'
 import donor2 from '../assets/donor2.jpg'
 import award3 from '../assets/award3.jpg'
+import { Link } from 'react-router-dom'
 
 interface Card {
   title: string
   date: string
   image: string
+  link: string
 }
 
 const cards: Card[] = [
@@ -14,32 +16,42 @@ const cards: Card[] = [
     title: 'ANW',
     date: 'May',
     image: donor2,
+    link: '/proker#anw',
   },
   {
     title: 'DGTS',
     date: 'August',
     image: dgts1,
+    link: '/proker#dgts',
   },
   {
     title: 'Awarding Night',
     date: 'November',
     image: award3,
+    link: '/proker#award',
   },
 ]
 
 const Events: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null)
+
   return (
     <div className="flex justify-center">
       <div className="grid grid-cols-1 md:grid-cols-3 w-full">
         {cards.map((card, i) => (
-          <div
+          <Link
+            to={card.link}
             key={i}
-            className="relative min-w-full h-[28vh] md:h-[65vh] flex items-center justify-center cursor-pointer overflow-hidden group"
+            onClick={() => setActiveIndex(i)}
+            className="relative min-w-full h-[28vh] md:h-[65vh] flex items-center justify-center cursor-pointer overflow-hidden group transition-all duration-300"
           >
             <img
               src={card.image}
               alt={`${card.title} image`}
-              className="absolute w-full h-full object-cover transition-all duration-700 ease-in-out grayscale group-hover:grayscale-0"
+              className={`absolute w-full h-full object-cover transition-all duration-700 ease-in-out 
+                grayscale 
+                ${activeIndex === i ? 'grayscale-0' : 'group-hover:grayscale-0'}
+              `}
             />
 
             {/* Dark overlay */}
@@ -54,7 +66,7 @@ const Events: React.FC = () => {
                 {card.date}
               </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
