@@ -7,10 +7,6 @@ import donor5 from '../assets/donor5.jpg'
 import donor2 from '../assets/donor2.jpg'
 import donor3 from '../assets/donor3.jpg'
 import donor4 from '../assets/donor4.jpg'
-import award2 from '../assets/award2.jpg'
-import award3 from '../assets/award3.jpg'
-import award4 from '../assets/award4.jpg'
-import award5 from '../assets/award5.jpg'
 import back1 from '../assets/back1.jpg'
 
 interface Card {
@@ -35,16 +31,6 @@ const cards: Card[] = [
     date: 'June',
     images: [back1],
   },
-  {
-    title: 'Donasi Uang',
-    date: 'September',
-    images: [back1],
-  },
-  {
-    title: 'Awarding Night',
-    date: 'September',
-    images: [award2, award3, award4, award5],
-  },
 ]
 
 const Events: React.FC = () => {
@@ -62,20 +48,11 @@ const Events: React.FC = () => {
       })
     }, [])
   
-    // Image changer
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setImageIndexes((prev) =>
-          prev.map((index, i) => (index + 1) % cards[i].images.length)
-        )
-      }, 5000)
-  
-      return () => clearInterval(interval)
-    }, [])
+   
   
     return (
       <div className="flex justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-5 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 w-full">
           {cards.map((card, i) => (
             <div
               key={i}
@@ -83,18 +60,24 @@ const Events: React.FC = () => {
             >
               {/* Layered Images */}
               {card.images.map((imgSrc, j) => (
+                <button
+                key={j}
+                onClick={() => console.log(`Clicked ${card.title} - Image ${j + 1}`)}
+                className="absolute inset-0 w-full h-full overflow-hidden z-10 transition-transform duration-150 ease-out active:scale-95"
+              >
                 <img
-                  key={j}
                   src={imgSrc}
                   alt={`${card.title} image ${j + 1}`}
-                  className={`absolute w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
-                    imageIndexes[i] === j ? 'opacity-100' : 'opacity-0'
-                  }`}
+                  className={`w-full h-full object-cover transition-all duration-700 ease-in-out transform 
+                    ${imageIndexes[i] === j ? 'opacity-100 scale-100 hover:scale-105' : 'opacity-0'}
+                  `}
                 />
+              </button>
+              
               ))}
   
               {/* Dark overlay */}
-              <div className="absolute inset-0 bg-black opacity-60 z-0" />
+              <div className= "absolute inset-0 bg-black opacity-60 z-0" />
   
               {/* Text */}
               <div className="relative z-10 p-8 md:p-12 text-center flex-grow">
@@ -106,7 +89,7 @@ const Events: React.FC = () => {
                 </p>
               </div>
   
-              {/* Dots positioned at the bottom */}
+              {/* Dots positioned at the bottom
               <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-1 z-10">
                 {card.images.map((_, j) => (
                   <span
@@ -116,7 +99,7 @@ const Events: React.FC = () => {
                     }`}
                   />
                 ))}
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
