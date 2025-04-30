@@ -12,8 +12,8 @@ const Home: React.FC = () => {
 
   return (
     // <SmoothScroll>
-      <div className="font-montserrat relative min-h-screen overflow-hidden">
-        <div className="relative h-[340vh] md:h-[310vh] w-full">
+      <div className="font-montserrat min-h-screen">
+        <div className="relative h-[340vh] md:h-[340vh] lg::h-[310vh] w-full">
           {images.map((image, index) => (
             <div
               key={index}

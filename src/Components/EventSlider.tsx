@@ -43,7 +43,7 @@ const EventSlider: React.FC = () => {
   const [awardRef, inViewAward] = useInView({ triggerOnce: true, threshold: 0.2 })
 
   return (
-    <div className="w-full px-6 py-10 flex justify-center mx-0 md:mx-8">
+    <div className="w-full px-6 py-10 flex justify-center overflow-x-hidden">
       <div className="max-w-6xl w-full flex flex-col gap-8">
 
         {/* ANW Section */}
@@ -53,9 +53,9 @@ const EventSlider: React.FC = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={inViewAnw ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="max-h-none md:h-screen flex flex-col justify-center items-center text-center"
+          className="max-h-none mt-12 lg:mt-0 lg:h-screen flex flex-col justify-center items-center text-center"
         >
-          <div className="order-2 md:order-1">
+          <div className="order-2 lg:order-1">
             <div className="relative flex justify-center items-center">
               <div className="absolute inset-0 mx-auto w-40 h-16 bg-blue-400 opacity-40 blur-2xl rounded-full z-0 pointer-events-none" />
               <h2 className="relative z-10 text-[24px] md:text-[34px] font-extrabold tracking-wide font-poppins text-indigo-300 pt-8 pb-8">
@@ -66,7 +66,7 @@ const EventSlider: React.FC = () => {
               Serangkaian kegiatan inspiratif yang meliputi kunjungan ke panti asuhan, penggalangan donasi, dan donor darah. Semua ini dilakukan untuk menumbuhkan kepedulian sosial serta meningkatkan kesadaran akan pentingnya menjaga kesehatan, khususnya di kalangan generasi muda.
             </p>
           </div>
-          <div className="grid gap-x-8 gap-y-4 order-1 md:order-2 justify-center items-center w-full md:w-[90vh]">
+          <div className="grid gap-x-8 gap-y-4 order-1 lg:order-2 justify-center items-center w-full lg:w-[90vh]">
             <Swiper {...swiperSettings}>
               {anwImages.map((img, index) => (
                 <SwiperSlide key={index}>
@@ -88,9 +88,9 @@ const EventSlider: React.FC = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={inViewDgts ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="max-h-none md:h-[60vh] grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 items-center my-4 md:my-8"
+          className="max-h-none md:h-[60vh] grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-4 items-center my-4 md:my-8"
         >
-          <div className="order-1 md:order-2">
+          <div className="order-1 lg:order-2">
             <Swiper {...swiperSettings}>
               {dgtsImages.map((img, index) => (
                 <SwiperSlide key={index}>
@@ -103,8 +103,8 @@ const EventSlider: React.FC = () => {
               ))}
             </Swiper>
           </div>
-          <div className="flex flex-col items-center md:items-start text-center md:text-left order-2 md:order-1">
-            <div className="relative flex justify-center md:justify-start items-center w-full">
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1">
+            <div className="relative flex justify-center lg:justify-start items-center w-full">
               <div className="absolute inset-0 w-60 h-16 bg-blue-400 opacity-40 blur-2xl rounded-full z-0 pointer-events-none" />
               <h2 className="relative z-10 text-[24px] md:text-[34px] font-extrabold tracking-wide font-poppins text-indigo-300 pt-4 pb-8">
                 What is DGTS?
@@ -123,7 +123,7 @@ const EventSlider: React.FC = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={inViewAward ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="max-h-none md:h-[60vh] grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 items-center"
+          className="max-h-none md:h-[60vh] grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-4 items-center"
         >
           <div>
             <Swiper {...swiperSettings}>
@@ -138,8 +138,8 @@ const EventSlider: React.FC = () => {
               ))}
             </Swiper>
           </div>
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="relative flex justify-center md:justify-start items-center w-full">
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+            <div className="relative flex justify-center lg:justify-start items-center w-full">
               <div className="absolute inset-0 w-[60vh] h-16 bg-blue-400 opacity-40 blur-2xl rounded-full z-0 pointer-events-none" />
               <h2 className="relative z-10 text-[24px] md:text-[34px] font-extrabold tracking-wide font-poppins text-indigo-300 pt-4 pb-8">
                 What is Awarding Night?
@@ -150,7 +150,6 @@ const EventSlider: React.FC = () => {
             </p>
           </div>
         </motion.div>
-
       </div>
     </div>
   )

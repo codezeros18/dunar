@@ -64,7 +64,7 @@ const Dunar: React.FC = () => {
       variants={fadeInUpContainer}
     >
       {/* TOP Section */}
-      <div className="h-[80vh] max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 items-center mb-16 w-full">
+      <div className="h-[80vh] max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8 items-center mb-16 w-full">
         <motion.div className='mx-4 md:mx-8' variants={fadeInUp}>
           <Swiper {...swiperSettings}>
             {dunar.map((dunar, index) => (
@@ -83,12 +83,12 @@ const Dunar: React.FC = () => {
         </motion.div>
 
         <motion.div
-          className="flex flex-col items-center md:items-start text-center md:text-left px-4"
+          className="flex flex-col items-center lg:items-start text-center lg:text-left px-4"
           variants={fadeInUp}
         >
           <div className='relative inline-block'>
             <div className='absolute left-1/2 -translate-x-1/2 w-32 md:w-40 h-16 bg-blue-400 opacity-40 blur-2xl rounded-full z-0 pointer-events-none' />
-            <h2 className='relative z-10 text-[24px] md:text-[34px] font-extrabold pb-8 tracking-wide font-poppins text-indigo-300 -mt-12 md:mt-0'>
+            <h2 className='relative z-10 text-[24px] md:text-[34px] font-extrabold pb-8 tracking-wide font-poppins text-indigo-300 -mt-12 lg:mt-0'>
               What is DAN?
             </h2>
           </div>
@@ -101,7 +101,7 @@ const Dunar: React.FC = () => {
       </div>
 
       {/* VISION / MISSION */}
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12 px-4 md:px-0'>
+      <div className='grid md::grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-12 px-4 md:px-0'>
         {sections.map((section) => (
           <motion.div
             key={section.title}

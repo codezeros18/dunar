@@ -7,13 +7,14 @@ import { useScrollToHash } from '../Components/useScrollToHash'
 
 const images = [Bg3, Bg3, Bg3]
 
+
 const Home: React.FC = () => {
   useScrollToHash()
 
   return (
     // <SmoothScroll>
-      <div className="font-montserrat relative min-h-screen overflow-hidden">
-      <div className="relative h-[210vh] md:h-[270vh] w-full">
+      <div className="font-montserrat min-h-screen">
+        <div className="relative h-[220vh] md:h-[270vh] w-full">
           {images.map((image, index) => (
             <div
               key={index}
