@@ -42,47 +42,47 @@ const divisions = [
         ChloeModal,
         NicoleModal,
       ],
-      description: `Isi Sendiri`,
+      description: `Divisi Badan Pengurus Harian (Adhyaksana) Merupakan pusat koordinasi seluruh kegiatan organisasi. Adhyaksana memastikan setiap divisi berjalan selaras, melakukan pengambilan keputusan strategis, dan menjaga arah visi serta misi organisasi.`,
     },
     {
       img: Vistara,
       modalImgs: [KennyModal, LintangModal],
-      description: `Divisi Website (VISTARA) bertanggung jawab merancang, membangun, dan memelihara situs resmi OMB UMN 2025 agar informasi selalu up-to-date dan mudah diakses.`,
+      description: `Divisi Website (Vistara) Bertanggung jawab atas perancangan, pengembangan, dan pemeliharaan website resmi Duta Anti Narkoba UMN 2025. Vistara memastikan semua informasi terpublikasi dengan baik, interaktif, dan mudah diakses oleh publik.`,
     },
     {
       img: Mahosatva,
       modalImgs: [SternModal, RafaModal],
-      description: `Divisi Acara (MAHOSATVA) merencanakan dan mengatur seluruh rundown kegiatan, memastikan setiap sesi berjalan lancar sesuai jadwal.`,
+      description: `Divisi Acara (Mahosatva) Bertugas untuk merancang, merencanakan, dan melaksanakan seluruh rangkaian kegiatan dan kampanye anti narkoba. Mahosatva menciptakan acara yang edukatif, inspiratif, dan berdampak luas.`,
     },
     {
       img: Samskruti,
       modalImgs: [StevModal, MarlonModal],
-      description: `Divisi Dokumentasi (SAMSKRUTI) mendokumentasikan setiap momen penting—mulai foto, video, hingga liputan media sosial.`,
+      description: `Divisi Dokumentasi (Samskruti) Mengabadikan setiap momen kegiatan melalui foto dan video. Samskruti juga bertugas menyusun arsip dokumentasi dan mempublikasikan konten yang menggambarkan semangat gerakan Duta Anti Narkoba 2025.`,
     },
     {
       img: Rupaka,
       modalImgs: [ThereModal, ChrisModal],
-      description: `Divisi Visual & Desain (RUPAKA) menciptakan materi grafis dan branding untuk semua keperluan promosi dan onsite.`,
+      description: `Divisi Visual (Rupaka) Bertanggung jawab atas seluruh aspek visual, termasuk desain grafis, branding, dan estetika publikasi. Rupaka memastikan identitas visual organisasi kuat dan menarik.`,
     },
     {
       img: Rakshana,
       modalImgs: [DerrenModal, AndrewModal],
-      description: `Divisi Keamanan (RAKSHANA) menjaga ketertiban dan keselamatan selama rangkaian acara, memastikan protokol berjalan dengan baik.`,
+      description: `Divisi Keamanan (Rakshana) Menjaga keamanan dan ketertiban dalam seluruh kegiatan organisasi, baik online maupun offline. Rakshana memastikan setiap program berjalan aman dan nyaman untuk semua pihak.`,
     },
     {
       img: Upakarana,
       modalImgs: [JustineModal, JoshModal],
-      description: `Divisi Perlengkapan (UPAKARANA) bertugas menyiapkan dan mengelola semua peralatan, mulai panggung, sound system, hingga logistik.`,
+      description: `Divisi Perlengkapan (Upakarana) Bertugas mengatur dan menyediakan seluruh kebutuhan logistik serta perlengkapan kegiatan. Upakarana memastikan semua persiapan teknis berjalan lancar.`,
     },
     {
       img: Sambandha,
       modalImgs: [RiekheModal, CheliModal],
-      description: `Divisi Public Relations (SAMBANDHA) menjalin komunikasi dengan media, sponsor, dan stakeholder untuk mendukung kesuksesan OMB UMN.`,
+      description: `Divisi Hubungan Masyarakat (Sambandha) Menjalin relasi dan membangun komunikasi strategis dengan pihak eksternal, termasuk media, komunitas, dan institusi lain. Sambandha menjadi wajah organisasi dalam membina citra positif di masyarakat.`,
     },
     {
       img: Dhanika,
       modalImgs: [ShakiraModal],
-      description: `Divisi Sponsor (DHANIKA) bertugas mencari, negosiasi, dan mengelola kemitraan dengan sponsor agar acara didukung secara maksimal.`,
+      description: `Divisi Dana dan Sponsor (Dhanika) Bertanggung jawab mencari, mengelola, dan mempertanggungjawabkan dana serta sponsorship. Dhanika memastikan keberlangsungan kegiatan melalui pendanaan yang transparan dan profesional.`,
     },
   ]
   
