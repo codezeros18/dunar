@@ -78,12 +78,13 @@ const Navbar: React.FC = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
-            className="mx-4 md:mx-12 rounded-[50px] shadow-md bg-white p-4 space-y-3 z-[999] relative"
-          >
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.3 }}
+          className="absolute left-0 right-0 top-[90px] mx-4 md:mx-12 rounded-[50px] shadow-md bg-white p-4 space-y-3 z-[999]"
+        >
+          
             <ul className="space-y-4">
               {Navbar.map((item, index) => (
                 <li key={index} className="text-[12px] px-10 font-semibold text-black transition-all duration-300 hover:text-indigo-300">
