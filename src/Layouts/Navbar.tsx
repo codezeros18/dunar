@@ -17,6 +17,11 @@ const Navbar: React.FC = () => {
 
   const toggleMobile = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+
+
+
+
+    
     if (animationRef.current) {
       animationRef.current.setSpeed(2);
       animationRef.current.setDirection(isMobileMenuOpen ? -1 : 1);
