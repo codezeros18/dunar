@@ -14,7 +14,7 @@ const About: React.FC = () => {
         <div className="absolute inset-0 bg-black opacity-50 z-10" />
         <div className="relative z-20">
           <Navbar />
-          <AboutUs2 />
+          {/* <AboutUs2 /> */}
         </div>
       </div>
       <Footer />
