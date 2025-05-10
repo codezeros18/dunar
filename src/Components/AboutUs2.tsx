@@ -57,60 +57,59 @@ const divisions: Group[] = [
 ]
 
 const AboutUs2: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [radius, setRadius] = useState(260)
-  const [selectedImages, setSelectedImages] = useState<string[] | null>(null)
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [currentDesc, setCurrentDesc] = useState("")
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [radius, setRadius] = useState(260);
+  const [selectedImages, setSelectedImages] = useState<string[] | null>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentDesc, setCurrentDesc] = useState("");
 
-  const itemSize = 160
-  const angleStep = (2 * Math.PI) / divisions.length
+  const itemSize = 160;
+  const angleStep = (2 * Math.PI) / divisions.length;
 
   useEffect(() => {
     const handleResize = () => {
-      const screenWidth = window.innerWidth
-      setRadius(screenWidth < 768 ? 140 : 260)
-    }
-    handleResize()
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+      const screenWidth = window.innerWidth;
+      setRadius(screenWidth < 768 ? 140 : 260);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const positions = useMemo(() => {
     return divisions.map((_, index) => {
-      const angle = angleStep * (index - currentIndex) - Math.PI / 2
-      const x = radius * Math.cos(angle)
-      const y = radius * Math.sin(angle)
-      return { x, y }
-    })
-  }, [currentIndex, radius])
+      const angle = angleStep * (index - currentIndex) - Math.PI / 2;
+      const x = radius * Math.cos(angle);
+      const y = radius * Math.sin(angle);
+      return { x, y };
+    });
+  }, [currentIndex, radius]);
 
-  // Auto-rotate (disabled while modal open)
   useEffect(() => {
-    if (selectedImages) return
+    if (selectedImages) return;
     const interval = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % divisions.length)
-    }, 2000)
-    return () => clearInterval(interval)
-  }, [selectedImages])
+      setCurrentIndex((prev) => (prev + 1) % divisions.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [selectedImages]);
 
   return (
-    <div className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
+    <div className="relative w-full h-[100dvh] flex flex-col items-center justify-center overflow-hidden">
       {/* Circle Items */}
       <div className="relative w-[80vw] h-[80vw] max-w-[600px] max-h-[600px] ml-8">
         {divisions.map((group, index) => {
-          const { x, y } = positions[index]
-          const isSelected = index === currentIndex
+          const { x, y } = positions[index];
+          const isSelected = index === currentIndex;
 
           return (
             <div
               key={group.id}
               onClick={() => {
-                setCurrentIndex(index)
+                setCurrentIndex(index);
                 if (group.modalImgs) {
-                  setSelectedImages(group.modalImgs)
-                  setCurrentSlide(0)
-                  setCurrentDesc(group.description)
+                  setSelectedImages(group.modalImgs);
+                  setCurrentSlide(0);
+                  setCurrentDesc(group.description);
                 }
               }}
               className="absolute cursor-pointer transition-all duration-500 ease-in-out will-change-transform"
@@ -120,35 +119,41 @@ const AboutUs2: React.FC = () => {
                 left: `calc(50% + ${x}px - ${itemSize / 2}px)`,
                 top: `calc(50% + ${y}px - ${itemSize / 2}px)`,
                 zIndex: isSelected ? 10 : 1,
+                transform: `translateZ(0)`, // iOS GPU fix
               }}
             >
               <img
                 src={group.image}
                 alt={`group-${index}`}
-                className="w-[18vh] h-[18vh] object-cover md:w-[34vh] md:h-[34vh]"
-                style={{ filter: 'brightness(1)' }}
+                className="w-[18vw] h-[18vw] md:w-[34vh] md:h-[34vh] object-cover rounded-full shadow-md"
+                style={{ filter: "brightness(1)" }}
               />
             </div>
-          )
+          );
         })}
       </div>
 
+      {/* Modal */}
       {selectedImages && (
-        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-            <div className="bg-white bg-right backdrop-blur-2xl bg-opacity-90 rounded-[50px] shadow-xl overflow-hidden max-w-lg w-full mt-20 lg:mt-10" style={{ backgroundImage: `url(${background2})` }}>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
 
+          <div
+            className="relative z-10 bg-white bg-right backdrop-blur-2xl bg-opacity-90 rounded-[50px] shadow-xl overflow-hidden max-w-lg w-full mt-20 lg:mt-10"
+            style={{ backgroundImage: `url(${background2})` }}
+          >
             <img
               src={selectedImages[currentSlide]}
               alt="Slide"
               className="w-full h-64 object-cover transition-all duration-700"
             />
 
-            <div className="p-6 text-gray-200 text-[12px] md:text-sm font-bold leading-relaxed">
+            <div className="p-6 text-gray-800 text-[12px] md:text-sm font-bold leading-relaxed">
               {currentDesc}
             </div>
 
             <div className="flex justify-between items-center px-6 pb-6 gap-4">
-              {/* Prev Button */}
+              {/* Prev */}
               <button
                 onClick={() =>
                   setCurrentSlide(
@@ -161,7 +166,7 @@ const AboutUs2: React.FC = () => {
                 <FaChevronLeft size={16} />
               </button>
 
-              {/* Close Button (Centered) */}
+              {/* Close */}
               <button
                 onClick={() => setSelectedImages(null)}
                 className="bg-red-600 text-white p-3 cursor-pointer rounded-full shadow-lg hover:bg-red-700 
@@ -170,7 +175,7 @@ const AboutUs2: React.FC = () => {
                 <FaTimes size={16} />
               </button>
 
-              {/* Next Button */}
+              {/* Next */}
               <button
                 onClick={() =>
                   setCurrentSlide((p) => (p + 1) % selectedImages.length)
@@ -180,14 +185,12 @@ const AboutUs2: React.FC = () => {
               >
                 <FaChevronRight size={16} />
               </button>
-
             </div>
-
           </div>
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default AboutUs2
+export default AboutUs2;
