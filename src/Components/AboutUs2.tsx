@@ -63,27 +63,18 @@ const AboutUs2: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [currentDesc, setCurrentDesc] = useState("")
 
+  const itemSize = 160
   const angleStep = (2 * Math.PI) / divisions.length
 
-  const [itemSize, setItemSize] = useState(160)
-
-    useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth
-      const newRadius = screenWidth < 768 ? 140 : 260
-      setRadius(prev => (prev !== newRadius ? newRadius : prev))
+      setRadius(screenWidth < 768 ? 140 : 260)
     }
-
-    handleResize() // initial call
+    handleResize()
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])
-
-  useEffect(() => {
-    console.log("Render radius:", radius, "Index:", currentIndex)
-  }, [radius, currentIndex])
-
-
 
   const positions = useMemo(() => {
     return divisions.map((_, index) => {
@@ -96,18 +87,17 @@ const AboutUs2: React.FC = () => {
 
   // Auto-rotate (disabled while modal open)
   useEffect(() => {
-    if (selectedImages || window.innerWidth < 768) return;
+    if (selectedImages) return
     const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % divisions.length)
     }, 2000)
     return () => clearInterval(interval)
   }, [selectedImages])
 
-
   return (
     <div className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Circle Items */}
-      <div className="relative w-[80vw] h-[80vw] max-w-[600px] max-h-[600px]">
+      <div className="relative w-[80vw] h-[80vw] max-w-[600px] max-h-[600px] ml-8">
         {divisions.map((group, index) => {
           const { x, y } = positions[index]
           const isSelected = index === currentIndex
