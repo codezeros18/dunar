@@ -2,7 +2,6 @@ import React, { useEffect, useMemo, useState } from 'react'
 
 import { FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa'
 
-import background from '../assets/back2.webp'
 import background2 from '../assets/backgroundblur.webp'
 
 // Images...
