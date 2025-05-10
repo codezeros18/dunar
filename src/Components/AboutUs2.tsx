@@ -67,16 +67,23 @@ const AboutUs2: React.FC = () => {
 
   const [itemSize, setItemSize] = useState(160)
 
-  useEffect(() => {
+    useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth
-      setRadius(screenWidth < 768 ? 140 : 260)
-      setItemSize(screenWidth < 768 ? 80 : 160)
+      const newRadius = screenWidth < 768 ? 140 : 260
+      setRadius(prev => (prev !== newRadius ? newRadius : prev))
     }
-    handleResize()
+
+    handleResize() // initial call
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])
+
+  useEffect(() => {
+    console.log("Render radius:", radius, "Index:", currentIndex)
+  }, [radius, currentIndex])
+
+
 
   const positions = useMemo(() => {
     return divisions.map((_, index) => {
