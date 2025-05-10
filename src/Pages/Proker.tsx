@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react'
 import Navbar from '../Layouts/Navbar'
 import Events from '../Components/EventSlider'
 import Footer from '../Layouts/Footer'
-import Bg3 from '../assets/back2.jpg'
+import Bg3 from '../assets/back2.webp'
 import { useScrollToHash } from '../Components/useScrollToHash'
 
 const images = [Bg3, Bg3, Bg3]

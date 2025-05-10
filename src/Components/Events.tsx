@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import dgts1 from '../assets/dgts1.jpg'
-import donor2 from '../assets/donor2.jpg'
-import award3 from '../assets/award3.jpg'
+import dgts1 from '../assets/dgts1.webp'
+import donor2 from '../assets/donor2.webp'
+import award3 from '../assets/award3.webp'
 import { Link } from 'react-router-dom'
 
 interface Card {

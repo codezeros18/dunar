@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.webp';
 import logo1 from '../assets/logo3.png';
 import { FaInstagram,FaEnvelope } from "react-icons/fa";
 import { RiLineFill } from "react-icons/ri";

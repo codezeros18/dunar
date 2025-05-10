@@ -1,6 +1,6 @@
 import Navbar from '../Layouts/Navbar'
 import Footer from '../Layouts/Footer'
-import Bg3 from '../assets/back2.jpg'
+import Bg3 from '../assets/back2.webp'
 import AboutUs2 from '../Components/AboutUs2'
 
 const images = [Bg3, Bg3, Bg3]

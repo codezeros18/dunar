@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react'
 import Navbar from '../Layouts/Navbar'
 import Header from '../Components/Header'
 import Events from '../Components/Events'
 import Footer from '../Layouts/Footer'
 import Dunar from '../Components/Dunar'
-import Bg3 from '../assets/back2.jpg'
+import Bg3 from '../assets/back2.webp'
 
 const images = [Bg3, Bg3, Bg3]
 

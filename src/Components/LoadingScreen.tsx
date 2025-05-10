@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.webp';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const LoadingScreen: React.FC = () => {
