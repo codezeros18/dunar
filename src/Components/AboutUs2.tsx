@@ -89,12 +89,13 @@ const AboutUs2: React.FC = () => {
 
   // Auto-rotate (disabled while modal open)
   useEffect(() => {
-    if (selectedImages) return
+    if (selectedImages || window.innerWidth < 768) return;
     const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % divisions.length)
     }, 2000)
     return () => clearInterval(interval)
   }, [selectedImages])
+
 
   return (
     <div className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
