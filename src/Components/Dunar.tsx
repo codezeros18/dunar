@@ -5,6 +5,7 @@ import dunar2 from '../assets/dgts1.webp';
 import dunar3 from '../assets/donor1.webp';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
+// @ts-ignore
 import 'swiper/css';
 
 const fadeInUpContainer = {
