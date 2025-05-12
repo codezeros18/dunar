@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@import "@fontsource/montserrat";
+@import "@fontsource/inter";
+@import '@fontsource/lora';
+@import '@fontsource/playfair-display';
+@import '@fontsource/dm-serif-display';
+@import "@fontsource/poppins";
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  font-size: 1.5rem;
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white;
+}
+
+html.has-scroll-smooth {
+  scroll-behavior: auto !important;
+}
+
+[data-scroll-container] {
+  will-change: transform;
+  transition: transform 0.1s ease-out; /* Smooth scrolling feel */
+}
+
+@layer utilities{
+  .text-glow {
+    text-shadow: 0 0 10px #00FF66, 0 0 20px #00FF66, 0 0 30px #00FF66;
+  }
+}
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.font-lora{
+  font-family: "Lora", serif;
+}
+
+.font-playfair{
+  font-family: "Playfair Display", serif;
+}
+
+.font-serif-display{
+  font-family: "DM Serif Display", serif;
+  /* font-weight: 400; */
+  font-style: normal;
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
