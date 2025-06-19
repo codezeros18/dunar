@@ -13,6 +13,7 @@ const Navbar: React.FC = () => {
   const Navbar = [
     { nav: 'Events', link: '/proker' },
     { nav: 'About Us', link: '/about' },
+    { nav: 'Sponsors', link: '/sponsor' },
   ];
 
   const toggleMobile = () => {

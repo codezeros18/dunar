@@ -3,6 +3,7 @@ import './index.css';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Proker from './Pages/Proker';
+import Sponsor from './Pages/Sponsor';
 import ScrollToTop from './Components/ScrollToTop';
 import { useState, useEffect } from 'react';
 import Loader from './Components/LoadingScreen'; // import loader component
@@ -27,6 +28,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/proker" element={<Proker />} />
+            <Route path="/sponsor" element={<Sponsor />} />
           </Routes>
         </Router>
       )}
