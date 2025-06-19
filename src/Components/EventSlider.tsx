@@ -1,7 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
-// @ts-ignore
+// @ts-ignorea
 import 'swiper/css'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'

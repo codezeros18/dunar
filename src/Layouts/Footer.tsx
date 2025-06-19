@@ -5,7 +5,7 @@ import { FaInstagram,FaEnvelope } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
-    <div className="bg-white py-16 min-h-[300px] flex flex-col items-center text-center space-y-8 h-auto font-poppins">
+    <div className="bg-white shadow-[0_-2px_10px_rgba(0,0,0,0.05)] py-16 min-h-[300px] flex flex-col items-center text-center space-y-8 h-auto font-poppins">
       {/* Mobile: Logos side by side */}
       <div className="flex items-center justify-center space-x-4 md:hidden">
         <img src={logo} alt="Logo 1" className="h-24 w-auto" />

@@ -3,6 +3,7 @@ import Header from '../Components/Header'
 import Events from '../Components/Events'
 import Footer from '../Layouts/Footer'
 import Dunar from '../Components/Dunar'
+import SponsorSlider from '../Components/SponsorSlider'
 import Bg3 from '../assets/back2.webp'
 import Vid from '../assets/vid1.mp4'
 
@@ -51,6 +52,11 @@ const Home: React.FC = () => {
         {/* === Other Sections === */}
         <div className="relative z-10">
           <Events />
+        </div>
+        <div className="relative z-10">
+          <SponsorSlider />
+        </div>
+        <div className="relative z-10">
           <Footer />
         </div>
       </div>
